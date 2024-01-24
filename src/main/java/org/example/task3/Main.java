@@ -9,6 +9,7 @@ package org.example.task3;
 почему значение GPA не было сохранено/восстановлено.
 */
 
+
 import java.io.*;
 
 public class Main {
@@ -31,6 +32,8 @@ public class Main {
             student2 = (Student)input.readObject();
             System.out.println("Объект десериализован");
             System.out.println(student2);
+            System.out.println("Значения поля GPA = " + student2.GPA + " потому что оно было помечено идентификатором " +
+                    "transient и изначально не сериализовалось в файл");
 
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
